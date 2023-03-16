@@ -354,7 +354,7 @@ export default class MacroJs {
           value = this.tokenizeNode(attrValue)
         } else if (this.types.isStringLiteral(attrValue)) {
           value = attrValue.value
-        } else if (this.types.isExpression(attrValue)) {
+        } else if (this.types.isIdentifier(attrValue)) {
           value = this.tokenizeExpression(attrValue)
         } else {
           value = (attrValue as unknown as StringLiteral).value
